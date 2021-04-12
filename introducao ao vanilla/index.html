@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1 id="main-text">Seja bem vindo ao fantatisco mundo </h1>
+   <h2>sites para ajudar nos estudos 
+       <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript">developer.mozilla funções</a>
+       <br>
+       <a href="https://www.w3schools.com/">w3schools evetos</a>
+    </h2>
+    <p>Aprendendo jS</p>
+    <p>Meu segundo paragrafo</p>
+    <script>
+        window.onload = function(){
+
+            if (typeof(Storage) !== "undefined") {
+                alert("navegado compativel");
+                initialiaze();
+            }else{
+                alert("nao compativel");
+            }
+            function initialiaze(){
+                if (sessionStorage.getItem("nome") !== null) {
+                    alert(sessionStorage.nome + "seja bem vindo de volta");
+                } else {
+                    alert("primeira visita no site");
+                    sessionStorage.nome = "joao";
+                }
+            }
+
+
+
+            /*var el = document.getElementById('main-text');
+            el.innerHTML = el.innerHTML +"da programação";
+            el.style.background = "red";
+            el.style.marginLeft ="50px";
+
+            var elemento = document.querySelectorAll('p');
+                for (var i = 0; i < elemento.length; i++) {
+                    elemento[i].style.color = "green";
+                }*/
+        }
+    </script>
+</body>
+</html>
